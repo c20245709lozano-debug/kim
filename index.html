@@ -4,63 +4,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Kim Lozano - Portfolio</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #fdf2f8;
+            background-image: 
+                radial-gradient(rgba(236, 72, 153, 0.22) 1.5px, transparent 1.5px),
+                radial-gradient(rgba(236, 72, 153, 0.12) 1px, transparent 1px);
+            background-size: 24px 24px, 12px 12px;
+            background-position: 0 0, 6px 6px;
+            background-attachment: fixed;
+        }
+    </style>
 </head>
 
-<body>
-    
-    <h1 class="text-3xl font-bold underline text-red-700 ">
-     Kim Lozano
-    </h1>
-    <button id="switch">Switch</button>
-    <header>
-        <nav>
-            <span>@kcly.ism_</span>
-            <ul>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact Me</a></li>
-            </ul>
-        </nav>
+<body class="text-pink-950 font-sans p-4 sm:p-8 max-w-3xl mx-auto space-y-6 min-h-screen">
+
+    <header
+        class="bg-gradient-to-r from-pink-200/90 via-pink-100/90 to-pink-200/90 backdrop-blur-md p-6 rounded-3xl border border-pink-200/90 shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+        <div>
+            <h1 class="text-2xl font-black text-pink-900 mt-1 tracking-tight">Kim Lozano</h1>
+        </div>
+        <span
+            class="text-xs font-bold text-pink-700 bg-white/80 backdrop-blur-xs px-3.5 py-1.5 rounded-full border border-pink-200/80 self-start sm:self-auto shadow-2xs">
+            @kcly.ism_
+        </span>
     </header>
 
-    <main>
-        <section id="projects"> 
-            <h2 class="projects">My Projects</h2>
-            <p>Personal portfolio, payroll system, company website, startup website, and compliance monitoring system.
-            </p>
+    <main class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+        <section class="bg-white/90 backdrop-blur-md p-6 rounded-3xl border border-pink-200/80 shadow-sm space-y-4">
+            <h2 class="text-lg font-bold text-pink-700 border-b border-pink-100 pb-2">Projects</h2>
+
+            <div class="space-y-3">
+                <div class="p-3.5 bg-pink-100/60 hover:bg-pink-100/90 transition-colors rounded-2xl border border-pink-200/60">
+                    <strong class="text-pink-950 text-sm block">Personal Portfolio</strong>
+                    <p class="text-xs text-pink-800 mt-0.5">Online brand & showcase platform.</p>
+                </div>
+
+                <div class="p-3.5 bg-pink-100/60 hover:bg-pink-100/90 transition-colors rounded-2xl border border-pink-200/60">
+                    <strong class="text-pink-950 text-sm block">Payroll System</strong>
+                    <p class="text-xs text-pink-800 mt-0.5">Automated payroll & tax calculation.</p>
+                </div>
+
+                <div class="p-3.5 bg-pink-100/60 hover:bg-pink-100/90 transition-colors rounded-2xl border border-pink-200/60">
+                    <strong class="text-pink-950 text-sm block">Company Websites</strong>
+                    <p class="text-xs text-pink-800 mt-0.5">Landing pages for corporate & startup clients.</p>
+                </div>
+
+                <div class="p-3.5 bg-pink-100/60 hover:bg-pink-100/90 transition-colors rounded-2xl border border-pink-200/60">
+                    <strong class="text-pink-950 text-sm block">Compliance System</strong>
+                    <p class="text-xs text-pink-800 mt-0.5">Tracking rules & regulatory deadlines.</p>
+                </div>
+            </div>
         </section>
 
-        <section id="services">
-            <h2 class="services">My Services</h2>
-            <p>Website Creation, System Creation, AI Automation, Database Management, Project Management, Systems
-                Analyst</p>
-        </section>
+        <div class="space-y-6">
 
-        <section id="contact">
-            <h2 class="contact">Let's build together!</h2>
-            <form action="#">
-                <!-- Name -->
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" required>
+            <section class="bg-white/90 backdrop-blur-md p-6 rounded-3xl border border-pink-200/80 shadow-sm space-y-3">
+                <h2 class="text-lg font-bold text-pink-700 border-b border-pink-100 pb-2">Services</h2>
 
-                <!-- Email -->
-                <label for="email">Email</label>
-                <input type="email" name="email" id="email" required>
+                <div class="flex flex-wrap gap-2 pt-1">
+                    <span
+                        class="px-3 py-1.5 bg-pink-100/80 text-pink-900 rounded-full text-xs font-semibold border border-pink-200/70">Website
+                        Creation</span>
+                    <span
+                        class="px-3 py-1.5 bg-pink-100/80 text-pink-900 rounded-full text-xs font-semibold border border-pink-200/70">System
+                        Creation</span>
+                    <span
+                        class="px-3 py-1.5 bg-pink-100/80 text-pink-900 rounded-full text-xs font-semibold border border-pink-200/70">AI
+                        Automation</span>
+                    <span
+                        class="px-3 py-1.5 bg-pink-100/80 text-pink-900 rounded-full text-xs font-semibold border border-pink-200/70">Database
+                        Management</span>
+                    <span
+                        class="px-3 py-1.5 bg-pink-100/80 text-pink-900 rounded-full text-xs font-semibold border border-pink-200/70">Project
+                        Management</span>
+                    <span
+                        class="px-3 py-1.5 bg-pink-100/80 text-pink-900 rounded-full text-xs font-semibold border border-pink-200/70">Systems
+                        Analysis</span>
+                </div>
+            </section>
 
-                <!-- Message -->
-                <label for="message">Message</label>
-                <textarea name="message" id="message" rows="5" required></textarea>
+            <section class="bg-white/90 backdrop-blur-md p-6 rounded-3xl border border-pink-200/80 shadow-sm space-y-3">
+                <h2 class="text-lg font-bold text-pink-700 border-b border-pink-100 pb-2">Get in Touch</h2>
 
-                <!-- Submit -->
-                <button type="submit">Send Message</button>
-            </form>
-        </section>
+                <form action="#" class="space-y-3 text-sm">
+                    <input type="text" placeholder="Your Name" required
+                        class="w-full p-3 rounded-2xl border border-pink-200 bg-pink-50/60 text-pink-950 placeholder:text-pink-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-pink-400 text-xs transition-colors">
+
+                    <input type="email" placeholder="Your Email" required
+                        class="w-full p-3 rounded-2xl border border-pink-200 bg-pink-50/60 text-pink-950 placeholder:text-pink-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-pink-400 text-xs transition-colors">
+
+                    <textarea placeholder="Your Message" rows="3" required
+                        class="w-full p-3 rounded-2xl border border-pink-200 bg-pink-50/60 text-pink-950 placeholder:text-pink-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-pink-400 text-xs resize-none transition-colors"></textarea>
+
+                    <button type="submit"
+                        class="w-full bg-pink-500 hover:bg-pink-600 active:bg-pink-700 text-white font-bold p-3 rounded-2xl transition-colors cursor-pointer text-xs shadow-xs">
+                        Send
+                    </button>
+                </form>
+            </section>
+
+        </div>
+
     </main>
 
-    <!-- <script src="script.js"></script> -->
+    <footer class="text-center text-xs text-pink-400 pt-2 font-medium">
+        <p>© Kim Lozano. All rights reserved.</p>
+    </footer>
+
 </body>
 
 </html>
