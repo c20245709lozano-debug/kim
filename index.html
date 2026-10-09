@@ -1,126 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kim Lozano - Portfolio</title>
-    
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-    
-    <style>
-        body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            background-color: #fdf2f8;
-            background-image: 
-                radial-gradient(rgba(236, 72, 153, 0.22) 1.5px, transparent 1.5px),
-                radial-gradient(rgba(236, 72, 153, 0.12) 1px, transparent 1px);
-            background-size: 24px 24px, 12px 12px;
-            background-position: 0 0, 6px 6px;
-            background-attachment: fixed;
-        }
+    <style type="text/tailwindcss">
+        @custom-variant dark (&:where(.dark, .dark *));
     </style>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
-<body class="text-pink-950 font-sans p-4 sm:p-8 max-w-3xl mx-auto space-y-6 min-h-screen">
+<body class="bg-gray-50 dark:bg-slate-900 bg-white text-slate-900 dark:text-white font-sans p-6 max-w-2xl mx-auto space-y-6">
 
-    <header
-        class="bg-gradient-to-r from-pink-200/90 via-pink-100/90 to-pink-200/90 backdrop-blur-md p-6 rounded-3xl border border-pink-200/90 shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+    <header class="flex justify-between items-center border-b border-gray-200 pb-4">
         <div>
-            <h1 class="text-2xl font-black text-pink-900 mt-1 tracking-tight">Kim Lozano</h1>
+            <h1 class="text-xl font-bold">Kim Lozano</h1>
+            <p class="text-xs text-gray-500">Systems Analyst & Developer</p>
         </div>
-        <span
-            class="text-xs font-bold text-pink-700 bg-white/80 backdrop-blur-xs px-3.5 py-1.5 rounded-full border border-pink-200/80 self-start sm:self-auto shadow-2xs">
-            @kcly.ism_
-        </span>
-    </header>
+        <button id="toggledark" class="text-xs px-2.5 py-1 border rounded-lg border-gray-300 dark:border-slate-900 bg-white dark:bg-slate-800  text-gray-700 dark:text-slate-200 ">
+                Toggle 
+            </button>
+        </header>
 
-    <main class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <section>
+        <h2 class="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-2">About</h2>
+        <p class="text-xs sm:text-sm leading-relaxed">
+            I am a Systems Analyst and Developer focused on building clean, efficient web apps and optimizing digital workflows.
+        </p>
+    </section>
 
-        <section class="bg-white/90 backdrop-blur-md p-6 rounded-3xl border border-pink-200/80 shadow-sm space-y-4">
-            <h2 class="text-lg font-bold text-pink-700 border-b border-pink-100 pb-2">Projects</h2>
+    <section id="services-section" class="p-4 border border-gray-200 rounded-xl transition-colors duration-200 dark:bg-slate-900 dark:border-slate-800 dark:text-slate-100">
+        <div class="flex justify-between items-center mb-3">
+            <h2 class="text-sm font-semibold text-gray-500 dark:text-slate-400 uppercase tracking-wider">Services</h2>
+        
+            
+        </div>
+        
+        <div class="flex flex-wrap gap-2 text-xs">
+            <span class="px-2.5 py-1 bg-gray-200 dark:bg-slate-800 text-gray-800 dark:text-slate-200 rounded">Website Creation</span>
+            <span class="px-2.5 py-1 bg-gray-200 dark:bg-slate-800 text-gray-800 dark:text-slate-200 rounded">System Creation</span>
+            <span class="px-2.5 py-1 bg-gray-200 dark:bg-slate-800 text-gray-800 dark:text-slate-200 rounded">AI Automation</span>
+            <span class="px-2.5 py-1 bg-gray-200 dark:bg-slate-800 text-gray-800 dark:text-slate-200 rounded">Database Management</span>
+            <span class="px-2.5 py-1 bg-gray-200 dark:bg-slate-800 text-gray-800 dark:text-slate-200 rounded">Systems Analysis</span>
+        </div>
+    </section>
 
-            <div class="space-y-3">
-                <div class="p-3.5 bg-pink-100/60 hover:bg-pink-100/90 transition-colors rounded-2xl border border-pink-200/60">
-                    <strong class="text-pink-950 text-sm block">Personal Portfolio</strong>
-                    <p class="text-xs text-pink-800 mt-0.5">Online brand & showcase platform.</p>
-                </div>
+    <section>
+        <h2 class="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-2">Projects</h2>
+        <ul class="space-y-2 text-xs">
+            <li class="p-3 bg-white border border-gray-200 rounded-lg">
+                <strong>Personal Portfolio</strong> — Showcase platform.
+            </li>
+            <li class="p-3 bg-white border border-gray-200 rounded-lg">
+                <strong>Payroll System</strong> — Automated tax & salary calculation.
+            </li>
+            <li class="p-3 bg-white border border-gray-200 rounded-lg">
+                <strong>Compliance System</strong> — Regulatory tracking tool.
+            </li>
+        </ul>
+    </section>
 
-                <div class="p-3.5 bg-pink-100/60 hover:bg-pink-100/90 transition-colors rounded-2xl border border-pink-200/60">
-                    <strong class="text-pink-950 text-sm block">Payroll System</strong>
-                    <p class="text-xs text-pink-800 mt-0.5">Automated payroll & tax calculation.</p>
-                </div>
+    <section>
+        <h2 class="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-2">Skills</h2>
+        <p class="text-xs text-gray-600">
+            HTML, CSS, JavaScript, Tailwind CSS, Git, System Architecture
+        </p>
+    </section>
 
-                <div class="p-3.5 bg-pink-100/60 hover:bg-pink-100/90 transition-colors rounded-2xl border border-pink-200/60">
-                    <strong class="text-pink-950 text-sm block">Company Websites</strong>
-                    <p class="text-xs text-pink-800 mt-0.5">Landing pages for corporate & startup clients.</p>
-                </div>
-
-                <div class="p-3.5 bg-pink-100/60 hover:bg-pink-100/90 transition-colors rounded-2xl border border-pink-200/60">
-                    <strong class="text-pink-950 text-sm block">Compliance System</strong>
-                    <p class="text-xs text-pink-800 mt-0.5">Tracking rules & regulatory deadlines.</p>
-                </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <section>
+            <h2 class="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-2">Experience</h2>
+            <div class="text-xs space-y-1">
+                <strong>Systems Analyst</strong>
+                <p class="text-gray-500">2025 - Present</p>
             </div>
         </section>
 
-        <div class="space-y-6">
+        <section>
+            <h2 class="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-2">Education</h2>
+            <div class="text-xs space-y-1">
+                <strong>BS Information Systems</strong>
+                <p class="text-gray-500">Colegio de Sta.Ana de Victorias</p>
+            </div>
+        </section>
+    </div>
 
-            <section class="bg-white/90 backdrop-blur-md p-6 rounded-3xl border border-pink-200/80 shadow-sm space-y-3">
-                <h2 class="text-lg font-bold text-pink-700 border-b border-pink-100 pb-2">Services</h2>
+    <section>
+        <h2 class="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-2">Contact</h2>
+        <form class="space-y-2 text-xs">
+            <input type="text" placeholder="Name" required class="w-full p-2.5 border border-gray-300 rounded-lg bg-white focus:outline-none">
+            <input type="email" placeholder="Email" required class="w-full p-2.5 border border-gray-300 rounded-lg bg-white focus:outline-none">
+            <textarea placeholder="Message" rows="3" required class="w-full p-2.5 border border-gray-300 rounded-lg bg-white focus:outline-none"></textarea>
+            <button type="submit" class="w-full py-2 bg-gray-900 text-white rounded-lg font-medium cursor-pointer">Send</button>
+        </form>
+    </section>
 
-                <div class="flex flex-wrap gap-2 pt-1">
-                    <span
-                        class="px-3 py-1.5 bg-pink-100/80 text-pink-900 rounded-full text-xs font-semibold border border-pink-200/70">Website
-                        Creation</span>
-                    <span
-                        class="px-3 py-1.5 bg-pink-100/80 text-pink-900 rounded-full text-xs font-semibold border border-pink-200/70">System
-                        Creation</span>
-                    <span
-                        class="px-3 py-1.5 bg-pink-100/80 text-pink-900 rounded-full text-xs font-semibold border border-pink-200/70">AI
-                        Automation</span>
-                    <span
-                        class="px-3 py-1.5 bg-pink-100/80 text-pink-900 rounded-full text-xs font-semibold border border-pink-200/70">Database
-                        Management</span>
-                    <span
-                        class="px-3 py-1.5 bg-pink-100/80 text-pink-900 rounded-full text-xs font-semibold border border-pink-200/70">Project
-                        Management</span>
-                    <span
-                        class="px-3 py-1.5 bg-pink-100/80 text-pink-900 rounded-full text-xs font-semibold border border-pink-200/70">Systems
-                        Analysis</span>
-                </div>
-            </section>
-
-            <section class="bg-white/90 backdrop-blur-md p-6 rounded-3xl border border-pink-200/80 shadow-sm space-y-3">
-                <h2 class="text-lg font-bold text-pink-700 border-b border-pink-100 pb-2">Get in Touch</h2>
-
-                <form action="#" class="space-y-3 text-sm">
-                    <input type="text" placeholder="Your Name" required
-                        class="w-full p-3 rounded-2xl border border-pink-200 bg-pink-50/60 text-pink-950 placeholder:text-pink-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-pink-400 text-xs transition-colors">
-
-                    <input type="email" placeholder="Your Email" required
-                        class="w-full p-3 rounded-2xl border border-pink-200 bg-pink-50/60 text-pink-950 placeholder:text-pink-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-pink-400 text-xs transition-colors">
-
-                    <textarea placeholder="Your Message" rows="3" required
-                        class="w-full p-3 rounded-2xl border border-pink-200 bg-pink-50/60 text-pink-950 placeholder:text-pink-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-pink-400 text-xs resize-none transition-colors"></textarea>
-
-                    <button type="submit"
-                        class="w-full bg-pink-500 hover:bg-pink-600 active:bg-pink-700 text-white font-bold p-3 rounded-2xl transition-colors cursor-pointer text-xs shadow-xs">
-                        Send
-                    </button>
-                </form>
-            </section>
-
-        </div>
-
-    </main>
-
-    <footer class="text-center text-xs text-pink-400 pt-2 font-medium">
-        <p>© Kim Lozano. All rights reserved.</p>
+    <footer class="text-center text-xs text-gray-400 border-t border-gray-200 pt-4">
+        © Kim Lozano. All rights reserved.
     </footer>
 
-</body>
+    <script>
+       const tb = document.querySelector("#toggledark");
+        const html = document.documentElement;
 
+        tb.addEventListener("click", function() {
+         html.classList.toggle("dark");
+});
+    </script>
+</body>
 </html>
