@@ -1,111 +1,222 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kim Lozano - Portfolio</title>
+    <title>Kim Lozano - Systems Analyst & Developer</title>
+
     <style type="text/tailwindcss">
+        
+        
         @custom-variant dark (&:where(.dark, .dark *));
+
+        @layer components {
+            .darkmode {
+                @apply bg-slate-950 text-slate-100;
+            }
+
+            .btn-primary {
+                @apply relative px-6 py-3.5 bg-pink-500 text-slate-100 font-black border-4 border-slate-950 dark:border-sky-200 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] dark:shadow-[6px_6px_0px_0px_rgba(186,230,253,1)] hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[8px_8px_0px_0px_rgba(186,230,253,1)] active:translate-x-[4px] active:translate-y-[4px] active:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:active:shadow-[2px_2px_0px_0px_rgba(186,230,253,1)] transition-all cursor-pointer uppercase text-xs tracking-widest inline-flex items-center justify-center gap-2 select-none;
+            }
+
+            .btn-secondary {
+                @apply relative px-5 py-2.5 bg-sky-100 text-slate-950 font-black border-4 border-slate-950 dark:border-sky-200 shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] dark:shadow-[5px_5px_0px_0px_rgba(186,230,253,1)] hover:bg-sky-200 hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[7px_7px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[7px_7px_0px_0px_rgba(186,230,253,1)] active:translate-x-[3px] active:translate-y-[3px] active:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:active:shadow-[2px_2px_0px_0px_rgba(186,230,253,1)] transition-all cursor-pointer text-xs uppercase tracking-wider inline-flex items-center justify-center gap-2 select-none;
+            }
+
+            .btn-accent {
+                @apply relative px-6 py-3.5 bg-amber-200 text-slate-950 font-black border-4 border-slate-950 dark:border-sky-200 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] dark:shadow-[6px_6px_0px_0px_rgba(186,230,253,1)] hover:bg-amber-400 hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[8px_8px_0px_0px_rgba(186,230,253,1)] active:translate-x-[4px] active:translate-y-[4px] active:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:active:shadow-[2px_2px_0px_0px_rgba(186,230,253,1)] transition-all cursor-pointer uppercase text-xs tracking-widest inline-flex items-center justify-center gap-2 select-none;
+            }
+        }
     </style>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@700&display=swap" rel="stylesheet">
 </head>
 
-<body class="bg-gray-50 dark:bg-slate-900 bg-white text-slate-900 dark:text-white font-sans p-6 max-w-2xl mx-auto space-y-6">
+<body
+    class="bg-sky-100 text-slate-950 dark:bg-slate-900 font-mono p-4 sm:p-8 max-w-5xl mx-auto space-y-8 transition-colors duration-200 selection:bg-sky-300 selection:text-slate-950">
 
-    <header class="flex justify-between items-center border-b border-gray-200 pb-4">
-        <div>
-            <h1 class="text-xl font-bold">Kim Lozano</h1>
-            <p class="text-xs text-gray-500">Systems Analyst & Developer</p>
+    <header
+        class="p-6 sm:p-10 bg-sky-100 dark:bg-slate-900 border-4 border-slate-950 dark:border-sky-200 shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] dark:shadow-[10px_10px_0px_0px_rgba(186,230,253,1)] flex flex-col md:flex-row justify-between items-start md:items-center gap-6 relative overflow-hidden">
+        <div class="space-y-2 z-10">
+            <div class="flex items-center gap-2">
+                <span
+                    class="inline-block bg-amber-200 text-slate-950 text-xs font-black uppercase px-3 py-1 border-2 border-slate-950 shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]">
+                    Available for Hire
+                </span>
+                <span
+                    class="inline-block bg-pink-500 text-slate-950 text-xs font-black uppercase px-3 py-1 border-2 border-slate-950 shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]">
+                    Victorias City
+                </span>
+            </div>
+            <h1
+                class="text-4xl sm:text-7xl font-bold uppercase tracking-normal text-slate-950 dark:text-pink-400 [font-family:'Fredoka',sans-serif]">
+                Kim Lozano
+            </h1>
+            <p class="text-xs sm:text-base font-black text-slate-800 dark:text-slate-200">
+                Systems Analyst • Systems Developer • Tech Strategist
+            </p>
         </div>
-        <button id="toggledark" class="text-xs px-2.5 py-1 border rounded-lg border-gray-300 dark:border-slate-900 bg-white dark:bg-slate-800  text-gray-700 dark:text-slate-200 ">
-                Toggle 
+
+        <div class="flex flex-wrap gap-3 z-10">
+            <button id="toggledark" class="btn-secondary">
+                Mode
             </button>
-        </header>
-
-    <section>
-        <h2 class="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-2">About</h2>
-        <p class="text-xs sm:text-sm leading-relaxed">
-            I am a Systems Analyst and Developer focused on building clean, efficient web apps and optimizing digital workflows.
-        </p>
-    </section>
-
-    <section id="services-section" class="p-4 border border-gray-200 rounded-xl transition-colors duration-200 dark:bg-slate-900 dark:border-slate-800 dark:text-slate-100">
-        <div class="flex justify-between items-center mb-3">
-            <h2 class="text-sm font-semibold text-gray-500 dark:text-slate-400 uppercase tracking-wider">Services</h2>
-        
-            
+            <a href="#contact" class="btn-primary">
+                Hire Me
+            </a>
         </div>
-        
-        <div class="flex flex-wrap gap-2 text-xs">
-            <span class="px-2.5 py-1 bg-gray-200 dark:bg-slate-800 text-gray-800 dark:text-slate-200 rounded">Website Creation</span>
-            <span class="px-2.5 py-1 bg-gray-200 dark:bg-slate-800 text-gray-800 dark:text-slate-200 rounded">System Creation</span>
-            <span class="px-2.5 py-1 bg-gray-200 dark:bg-slate-800 text-gray-800 dark:text-slate-200 rounded">AI Automation</span>
-            <span class="px-2.5 py-1 bg-gray-200 dark:bg-slate-800 text-gray-800 dark:text-slate-200 rounded">Database Management</span>
-            <span class="px-2.5 py-1 bg-gray-200 dark:bg-slate-800 text-gray-800 dark:text-slate-200 rounded">Systems Analysis</span>
-        </div>
-    </section>
+    </header>
 
-    <section>
-        <h2 class="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-2">Projects</h2>
-        <ul class="space-y-2 text-xs">
-            <li class="p-3 bg-white border border-gray-200 rounded-lg">
-                <strong>Personal Portfolio</strong> — Showcase platform.
-            </li>
-            <li class="p-3 bg-white border border-gray-200 rounded-lg">
-                <strong>Payroll System</strong> — Automated tax & salary calculation.
-            </li>
-            <li class="p-3 bg-white border border-gray-200 rounded-lg">
-                <strong>Compliance System</strong> — Regulatory tracking tool.
-            </li>
-        </ul>
-    </section>
+    <main class="grid grid-cols-1 md:grid-cols-12 gap-8">
 
-    <section>
-        <h2 class="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-2">Skills</h2>
-        <p class="text-xs text-gray-600">
-            HTML, CSS, JavaScript, Tailwind CSS, Git, System Architecture
-        </p>
-    </section>
+        <section
+            class="md:col-span-7 p-6 sm:p-8 bg-sky-100 dark:bg-slate-900 border-4 border-slate-950 dark:border-sky-200 shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] dark:shadow-[10px_10px_0px_0px_rgba(186,230,253,1)] flex flex-col justify-between space-y-6">
+            <div>
+                <div class="flex justify-between items-center mb-6">
+                    <h2
+                        class="text-xs font-black bg-amber-200  text-slate-950 uppercase tracking-widest px-3.5 py-1.5 inline-block border-2 border-slate-950 dark:border-sky-200 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:shadow-[4px_4px_0px_0px_rgba(186,230,253,1)]">
+                        01. About Me
+                    </h2>
+                    
+                </div>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        <section>
-            <h2 class="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-2">Experience</h2>
-            <div class="text-xs space-y-1">
-                <strong>Systems Analyst</strong>
-                <p class="text-gray-500">2025 - Present</p>
+                <div class="space-y-4 text-xs sm:text-sm font-bold leading-relaxed text-slate-900 dark:text-slate-100">
+                    <div
+                        class="bg-pink-500 dark:bg-amber-200 p-4 border-3 border-slate-950 dark:border-slate-700 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:shadow-[4px_4px_0px_0px_rgba(186,230,253,1)] hover:-translate-y-1 transition-transform">
+                        <span class="text-amber-200 dark:text-slate-900 font-black">LOCATION:</span> <span class="text-slate-900 dark:text-pink-500 font-black"> Victorias City,
+                        Negros Occidental, Philippines</span>
+                    </div>
+                    <div
+                        class="bg-pink-500 dark:bg-amber-200 p-4 border-3 border-slate-950 dark:border-slate-700 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:shadow-[4px_4px_0px_0px_rgba(186,230,253,1)] hover:-translate-y-1 transition-transform">
+                        <span class="text-amber-200 dark:text-slate-900 font-black">LANGUAGES:</span> <span class="text-slate-900 dark:text-pink-500 font-black">English, Hiligaynon,
+                        and Tagalog/span>
+                    </div>
+                    <div
+                        class="bg-pink-500  dark:bg-amber-200 p-4 border-3 border-slate-950 dark:border-slate-700 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:shadow-[4px_4px_0px_0px_rgba(186,230,253,1)] hover:-translate-y-1 transition-transform">
+                        <span class="text-amber-200 dark:text-slate-900 font-black">CORE FOCUS:</span> <span class="text-slate-900 dark:text-pink-500 font-black"> High-performance
+                        Web Engineering, Systems Architecture, & Workflow Automation </span>
+                    </div>
+                </div>
+            </div>
+
+            <div
+                class="p-3 bg-pink-500 text-slate-950 dark:text-font-black border-2 border-slate-950 text-center text-xs uppercase tracking-wider shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]">
+                Ready to transform complex business problems into simple software solutions.
             </div>
         </section>
 
-        <section>
-            <h2 class="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-2">Education</h2>
-            <div class="text-xs space-y-1">
-                <strong>BS Information Systems</strong>
-                <p class="text-gray-500">Colegio de Sta.Ana de Victorias</p>
+        <section id="services-section"
+            class="md:col-span-5 p-6 sm:p-8 bg-sky-100 dark:bg-slate-900 border-4 border-slate-950 dark:border-sky-200 shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] dark:shadow-[10px_10px_0px_0px_rgba(186,230,253,1)]">
+            <div class="flex justify-between items-center mb-6">
+                <h2
+                    class="text-xs font-black bg-amber-200 text-slate-950 uppercase tracking-widest px-3.5 py-1.5 inline-block border-2 border-slate-950 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                    02. Services
+                </h2>
+             
+            </div>
+
+            <div class="flex flex-col gap-3.5 text-xs">
+                <div
+                    class="p-3 bg-pink-500 dark:bg-pink-500 text-slate-950 dark:text-white font-black border-3 border-slate-950 dark:border-slate-600 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:shadow-[4px_4px_0px_0px_rgba(186,230,253,1)] transition-transform hover:-translate-x-1 flex items-center justify-between">
+                    <span> Website Creation</span>
+                    <span
+                        class="bg-sky-100 dark:bg-slate-900 text-[10px] text-slate-950 dark:text-white px-1.5 py-0.5 border border-slate-950 dark:border-sky-200">WEB</span>
+                </div>
+                <div
+                    class="p-3 bg-pink-500 dark:bg-pink-500 text-slate-950 dark:text-white font-black border-3 border-slate-950 dark:border-slate-600 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:shadow-[4px_4px_0px_0px_rgba(186,230,253,1)] transition-transform hover:-translate-x-1 flex items-center justify-between">
+                    <span> System Creation</span>
+                    <span
+                        class="bg-sky-100 dark:bg-slate-900 text-[10px] text-slate-950 dark:text-white px-1.5 py-0.5 border border-slate-950 dark:border-sky-200">APPS</span>
+                </div>
+                <div
+                    class="p-3 bg-pink-500 dark:bg-pink-500 text-slate-950 dark:text-white font-black border-3 border-slate-950 dark:border-slate-600 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:shadow-[4px_4px_0px_0px_rgba(186,230,253,1)] transition-transform hover:-translate-x-1 flex items-center justify-between">
+                    <span> AI Automation</span>
+                    <span
+                        class="bg-sky-100 dark:bg-slate-900 text-[10px] text-slate-950 dark:text-white px-1.5 py-0.5 border border-slate-950 dark:border-sky-200">AUTO</span>
+                </div>
+                <div
+                    class="p-3 bg-pink-500 dark:bg-pink-500 text-slate-950 dark:text-white font-black border-3 border-slate-950 dark:border-slate-600 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:shadow-[4px_4px_0px_0px_rgba(186,230,253,1)] transition-transform hover:-translate-x-1 flex items-center justify-between">
+                    <span> Database Management</span>
+                    <span
+                        class="bg-sky-100 dark:bg-slate-900 text-[10px] text-slate-950 dark:text-white px-1.5 py-0.5 border border-slate-950 dark:border-sky-200">DATA</span>
+                </div>
+                <div
+                    class="p-3 bg-pink-500 dark:bg-pink-500 text-slate-950 dark:text-white font-black border-3 border-slate-950 dark:border-slate-600 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:shadow-[4px_4px_0px_0px_rgba(186,230,253,1)] transition-transform hover:-translate-x-1 flex items-center justify-between">
+                    <span> Systems Analysis</span>
+                    <span
+                        class="bg-sky-100 dark:bg-slate-900 text-[10px] text-slate-950 dark:text-white px-1.5 py-0.5 border border-slate-950 dark:border-sky-200">ARCH</span>
+                </div>
             </div>
         </section>
-    </div>
 
-    <section>
-        <h2 class="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-2">Contact</h2>
-        <form class="space-y-2 text-xs">
-            <input type="text" placeholder="Name" required class="w-full p-2.5 border border-gray-300 rounded-lg bg-white focus:outline-none">
-            <input type="email" placeholder="Email" required class="w-full p-2.5 border border-gray-300 rounded-lg bg-white focus:outline-none">
-            <textarea placeholder="Message" rows="3" required class="w-full p-2.5 border border-gray-300 rounded-lg bg-white focus:outline-none"></textarea>
-            <button type="submit" class="w-full py-2 bg-gray-900 text-white rounded-lg font-medium cursor-pointer">Send</button>
-        </form>
-    </section>
+        <section id="contact"
+            class="md:col-span-12 p-6 sm:p-10 bg-sky-100 dark:bg-slate-900 border-4 border-slate-950 dark:border-sky-200 shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] dark:shadow-[10px_10px_0px_0px_rgba(186,230,253,1)]">
+            <div class="flex justify-between items-center mb-6">
+                <h2
+                    class="text-xs font-black bg-pink-500 text-slate-950 uppercase tracking-widest px-3.5 py-1.5 inline-block border-2 border-slate-950 dark:border-sky-200 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:shadow-[4px_4px_0px_0px_rgba(186,230,253,1)]">
+                    03. Contact
+                </h2>
+                
+            </div>
 
-    <footer class="text-center text-xs text-gray-400 border-t border-gray-200 pt-4">
-        © Kim Lozano. All rights reserved.
+            <form class="space-y-5 text-xs font-bold">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                    <div class="space-y-1.5">
+                        <label
+                            class="uppercase tracking-wider font-black text-slate-900 dark:text-slate-100">Name</label>
+                        <input type="text" placeholder="YOUR NAME" required
+                            class="w-full p-3.5 border-3 border-slate-950 dark:border-sky-200 bg-sky-50 dark:bg-slate-800 text-slate-900 dark:text-slate-100 placeholder:text-slate-500 focus:bg-sky-200 dark:focus:bg-slate-900 focus:outline-none shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:shadow-[4px_4px_0px_0px_rgba(186,230,253,1)] transition-colors">
+                    </div>
+
+                    <div class="space-y-1.5">
+                        <label
+                            class="uppercase tracking-wider font-black text-slate-900 dark:text-slate-100">Email</label>
+                        <input type="email" placeholder="YOUR EMAIL ADDRESS" required
+                            class="w-full p-3.5 border-3 border-slate-950 dark:border-sky-200 bg-sky-50 dark:bg-slate-800 text-slate-900 dark:text-slate-100 placeholder:text-slate-500 focus:bg-sky-200 dark:focus:bg-slate-900 focus:outline-none shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:shadow-[4px_4px_0px_0px_rgba(186,230,253,1)] transition-colors">
+                    </div>
+                </div>
+
+                <div class="space-y-1.5">
+                    <label
+                        class="uppercase tracking-wider font-black text-slate-900 dark:text-slate-100">Message</label>
+                    <textarea placeholder="PROJECT DETAILS / INQUIRIES..." rows="4" required
+                        class="w-full p-3.5 border-3 border-slate-950 dark:border-sky-200 bg-sky-50 dark:bg-slate-800 text-slate-900 dark:text-slate-100 placeholder:text-slate-500 focus:bg-sky-200 dark:focus:bg-slate-900 focus:outline-none resize-none shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:shadow-[4px_4px_0px_0px_rgba(186,230,253,1)] transition-colors"></textarea>
+                </div>
+
+                <div class="flex flex-wrap gap-4 pt-2">
+                    <button type="submit" class="btn-primary flex-1">
+                        Send Message
+                    </button>
+                    <button type="button" class="btn-accent">
+                        Urgent Direct
+                    </button>
+                </div>
+            </form>
+        </section>
+
+    </main>
+
+    <footer
+        class="p-6 text-center text-xs font-black bg-sky-100 dark:bg-slate-900 border-4 border-slate-950 dark:border-sky-200 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] dark:shadow-[8px_8px_0px_0px_rgba(186,230,253,1)] flex flex-col sm:flex-row justify-between items-center gap-4">
+        <div class ="dark:text-white">© KIM LOZANO. ALL RIGHTS RESERVED.</div>
+        <div class="flex items-center gap-3">
+            <span
+                class="inline-block w-2.5 h-2.5 rounded-full bg-emerald-500 border border-slate-950 animate-pulse"></span>
+            <span class="uppercase tracking-wider dark:text-white">Systems Online</span>
+        </div>
     </footer>
 
     <script>
-       const tb = document.querySelector("#toggledark");
-        const html = document.documentElement;
+        const tb = document.querySelector("#toggledark");
+        const html = document.querySelector("html");
 
-        tb.addEventListener("click", function() {
-         html.classList.toggle("dark");
-});
+        tb.addEventListener("click", function () {
+            html.classList.toggle("dark");
+        });
     </script>
 </body>
+
 </html>
