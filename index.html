@@ -7,8 +7,7 @@
     <title>Kim Lozano - Systems Analyst & Developer</title>
 
     <style type="text/tailwindcss">
-        
-        
+
         @custom-variant dark (&:where(.dark, .dark *));
 
         @layer components {
@@ -17,33 +16,55 @@
             }
 
             .btn-primary {
-                @apply relative px-6 py-3.5 bg-pink-500 text-slate-100 font-black border-4 border-slate-950 dark:border-sky-200 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] dark:shadow-[6px_6px_0px_0px_rgba(186,230,253,1)] hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[8px_8px_0px_0px_rgba(186,230,253,1)] active:translate-x-[4px] active:translate-y-[4px] active:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:active:shadow-[2px_2px_0px_0px_rgba(186,230,253,1)] transition-all cursor-pointer uppercase text-xs tracking-widest inline-flex items-center justify-center gap-2 select-none;
+                @apply relative px-6 py-3.5 bg-pink-500 text-slate-100 font-black border-4 border-slate-950 dark:border-[#FAF6EE] shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] dark:shadow-[6px_6px_0px_0px_rgba(250,246,238,1)] hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[8px_8px_0px_0px_rgba(250,246,238,1)] active:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:active:shadow-[2px_2px_0px_0px_rgba(250,246,238,1)] cursor-pointer uppercase text-xs tracking-widest inline-flex items-center justify-center gap-2 select-none;
             }
 
             .btn-secondary {
-                @apply relative px-5 py-2.5 bg-sky-100 text-slate-950 font-black border-4 border-slate-950 dark:border-sky-200 shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] dark:shadow-[5px_5px_0px_0px_rgba(186,230,253,1)] hover:bg-sky-200 hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[7px_7px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[7px_7px_0px_0px_rgba(186,230,253,1)] active:translate-x-[3px] active:translate-y-[3px] active:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:active:shadow-[2px_2px_0px_0px_rgba(186,230,253,1)] transition-all cursor-pointer text-xs uppercase tracking-wider inline-flex items-center justify-center gap-2 select-none;
+                @apply relative px-5 py-2.5 bg-[#FAF6EE] text-slate-950 font-black border-4 border-slate-950 dark:border-[#FAF6EE] shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] dark:shadow-[5px_5px_0px_0px_rgba(250,246,238,1)] hover:bg-[#F3EDE0] hover:shadow-[7px_7px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[7px_7px_0px_0px_rgba(250,246,238,1)] active:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:active:shadow-[2px_2px_0px_0px_rgba(250,246,238,1)] cursor-pointer text-xs uppercase tracking-wider inline-flex items-center justify-center gap-2 select-none;
             }
 
             .btn-accent {
-                @apply relative px-6 py-3.5 bg-amber-200 text-slate-950 font-black border-4 border-slate-950 dark:border-sky-200 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] dark:shadow-[6px_6px_0px_0px_rgba(186,230,253,1)] hover:bg-amber-400 hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[8px_8px_0px_0px_rgba(186,230,253,1)] active:translate-x-[4px] active:translate-y-[4px] active:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:active:shadow-[2px_2px_0px_0px_rgba(186,230,253,1)] transition-all cursor-pointer uppercase text-xs tracking-widest inline-flex items-center justify-center gap-2 select-none;
+                @apply relative px-6 py-3.5 bg-amber-200 text-slate-950 font-black border-4 border-slate-950 dark:border-[#FAF6EE] shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] dark:shadow-[6px_6px_0px_0px_rgba(250,246,238,1)] hover:bg-amber-400 hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[8px_8px_0px_0px_rgba(250,246,238,1)] active:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:active:shadow-[2px_2px_0px_0px_rgba(250,246,238,1)] cursor-pointer uppercase text-xs tracking-widest inline-flex items-center justify-center gap-2 select-none;
+            }
+
+            .card-secondary {
+                @apply bg-[#FAF6EE] dark:bg-slate-900 border-4 border-slate-950 dark:border-[#FAF6EE] shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] dark:shadow-[10px_10px_0px_0px_rgba(250,246,238,1)];
+            }
+
+            .card-primary {
+                @apply bg-pink-500 dark:bg-amber-200 border-3 border-slate-950 dark:border-slate-700 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:shadow-[4px_4px_0px_0px_rgba(250,246,238,1)];
+            }
+
+            .card-accent {
+                @apply bg-amber-200 text-slate-950 font-black border-2 border-slate-950 shadow-[3px_3px_0px_0px_rgba(0,0,0,1)];
             }
         }
+        
+    .physics-particle {
+        position: fixed;
+        width: 12px;
+        height: 12px;
+        pointer-events: none;
+        z-index: 9999;
+        border: 2px solid #0f172a;
+    }
+
     </style>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@700&display=swap" rel="stylesheet">
+
 </head>
 
 <body
-    class="bg-sky-100 text-slate-950 dark:bg-slate-900 font-mono p-4 sm:p-8 max-w-5xl mx-auto space-y-8 transition-colors duration-200 selection:bg-sky-300 selection:text-slate-950">
+    class="bg-[#FFFCDE] text-slate-950 dark:bg-slate-950 font-mono p-4 sm:p-8 md:p-12 w-full min-h-screen space-y-8 transition-colors selection:bg-amber-200 selection:text-slate-950">
 
     <header
-        class="p-6 sm:p-10 bg-sky-100 dark:bg-slate-900 border-4 border-slate-950 dark:border-sky-200 shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] dark:shadow-[10px_10px_0px_0px_rgba(186,230,253,1)] flex flex-col md:flex-row justify-between items-start md:items-center gap-6 relative overflow-hidden">
+        class="p-6 sm:p-10 md:p-12 card-secondary flex flex-col md:flex-row justify-between items-start md:items-center gap-6 relative overflow-hidden w-full">
         <div class="space-y-2 z-10">
             <div class="flex items-center gap-2">
-                <span
-                    class="inline-block bg-amber-200 text-slate-950 text-xs font-black uppercase px-3 py-1 border-2 border-slate-950 shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]">
+                <span class="inline-block card-accent text-xs uppercase px-3 py-1">
                     Available for Hire
                 </span>
                 <span
@@ -52,10 +73,10 @@
                 </span>
             </div>
             <h1
-                class="text-4xl sm:text-7xl font-bold uppercase tracking-normal text-slate-950 dark:text-pink-400 [font-family:'Fredoka',sans-serif]">
+                class="text-4xl sm:text-7xl lg:text-8xl font-bold uppercase tracking-normal text-slate-950 dark:text-pink-400 [font-family:'Fredoka',sans-serif]">
                 Kim Lozano
             </h1>
-            <p class="text-xs sm:text-base font-black text-slate-800 dark:text-slate-200">
+            <p class="text-xs sm:text-base md:text-lg font-black text-slate-800 dark:text-slate-200">
                 Systems Analyst • Systems Developer • Tech Strategist
             </p>
         </div>
@@ -64,102 +85,198 @@
             <button id="toggledark" class="btn-secondary">
                 Mode
             </button>
-            <a href="#contact" class="btn-primary">
+            <button id="replay" class="btn-secondary">
+                Replay
+            </button>
+
+            <a id="hireMe" class="btn-primary">
                 Hire Me
             </a>
         </div>
     </header>
 
-    <main class="grid grid-cols-1 md:grid-cols-12 gap-8">
+    <nav class="card-secondary p-4 w-full flex flex-wrap items-center justify-between gap-4">
+        <div class="flex items-center gap-2">
+            <span
+                class="inline-block bg-pink-500 text-slate-950 dark:border-[#FAF6EE] dark:shadow-[2px_2px_0px_0px_rgba(250,246,238,1)] text-xs font-black uppercase px-2.5 py-1 border-2 border-slate-950 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
+                KL.
+            </span>
+            <span class="text-xs font-black uppercase tracking-wider text-slate-950 dark:text-pink-400">
+                Portfolio Navigation
+            </span>
+        </div>
+        <ul class="nav-item-list flex flex-wrap items-center gap-2 sm:gap-3 dark:text-pink-400">
+            <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="#services-section" class="nav-link">Services</a></li>
+            <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+            <li class="nav-item"><a href="#experience" class="nav-link">Experience</a></li>
+            <li class="nav-item"><a href="#education" class="nav-link">Education</a></li>
+            <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+    </nav>
 
-        <section
-            class="md:col-span-7 p-6 sm:p-8 bg-sky-100 dark:bg-slate-900 border-4 border-slate-950 dark:border-sky-200 shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] dark:shadow-[10px_10px_0px_0px_rgba(186,230,253,1)] flex flex-col justify-between space-y-6">
+    <main class="grid grid-cols-1 md:grid-cols-12 gap-8 w-full">
+
+        <section class="md:col-span-7 p-6 sm:p-8 lg:p-10 card-secondary flex flex-col justify-between space-y-6">
             <div>
                 <div class="flex justify-between items-center mb-6">
                     <h2
-                        class="text-xs font-black bg-amber-200  text-slate-950 uppercase tracking-widest px-3.5 py-1.5 inline-block border-2 border-slate-950 dark:border-sky-200 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:shadow-[4px_4px_0px_0px_rgba(186,230,253,1)]">
+                        class="text-xs font-black card-accent uppercase tracking-widest px-3.5 py-1.5 inline-block dark:border-[#FAF6EE] dark:shadow-[4px_4px_0px_0px_rgba(250,246,238,1)]">
                         01. About Me
                     </h2>
-                    
                 </div>
 
-                <div class="space-y-4 text-xs sm:text-sm font-bold leading-relaxed text-slate-900 dark:text-slate-100">
-                    <div
-                        class="bg-pink-500 dark:bg-amber-200 p-4 border-3 border-slate-950 dark:border-slate-700 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:shadow-[4px_4px_0px_0px_rgba(186,230,253,1)] hover:-translate-y-1 transition-transform">
-                        <span class="text-amber-200 dark:text-slate-900 font-black">LOCATION:</span> <span class="text-slate-900 dark:text-pink-500 font-black"> Victorias City,
-                        Negros Occidental, Philippines</span>
+                <div
+                    class="space-y-4 text-xs sm:text-sm md:text-base font-bold leading-relaxed text-slate-900 dark:text-slate-100">
+                    <div class="card-primary p-4">
+                        <span class="text-amber-200 dark:text-slate-900 font-black">LOCATION:</span> <span
+                            class="text-slate-900 dark:text-pink-500 font-black"> Victorias City,
+                            Negros Occidental, Philippines</span>
                     </div>
-                    <div
-                        class="bg-pink-500 dark:bg-amber-200 p-4 border-3 border-slate-950 dark:border-slate-700 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:shadow-[4px_4px_0px_0px_rgba(186,230,253,1)] hover:-translate-y-1 transition-transform">
-                        <span class="text-amber-200 dark:text-slate-900 font-black">LANGUAGES:</span> <span class="text-slate-900 dark:text-pink-500 font-black">English, Hiligaynon,
-                        and Tagalog/span>
+                    <div class="card-primary p-4">
+                        <span class="text-amber-200 dark:text-slate-900 font-black">LANGUAGES:</span> <span
+                            class="text-slate-900 dark:text-pink-500 font-black">English, Hiligaynon,
+                            and Tagalog</span>
                     </div>
-                    <div
-                        class="bg-pink-500  dark:bg-amber-200 p-4 border-3 border-slate-950 dark:border-slate-700 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:shadow-[4px_4px_0px_0px_rgba(186,230,253,1)] hover:-translate-y-1 transition-transform">
-                        <span class="text-amber-200 dark:text-slate-900 font-black">CORE FOCUS:</span> <span class="text-slate-900 dark:text-pink-500 font-black"> High-performance
-                        Web Engineering, Systems Architecture, & Workflow Automation </span>
+                    <div class="card-primary p-4">
+                        <span class="text-amber-200 dark:text-slate-900 font-black">CORE FOCUS:</span> <span
+                            class="text-slate-900 dark:text-pink-500 font-black"> High-performance
+                            Web Engineering, Systems Architecture, & Workflow Automation </span>
                     </div>
                 </div>
             </div>
 
             <div
-                class="p-3 bg-pink-500 text-slate-950 dark:text-font-black border-2 border-slate-950 text-center text-xs uppercase tracking-wider shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]">
+                class="p-3 bg-pink-500 text-slate-950 font-black border-2 border-slate-950 text-center text-xs uppercase tracking-wider shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]">
                 Ready to transform complex business problems into simple software solutions.
             </div>
         </section>
 
-        <section id="services-section"
-            class="md:col-span-5 p-6 sm:p-8 bg-sky-100 dark:bg-slate-900 border-4 border-slate-950 dark:border-sky-200 shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] dark:shadow-[10px_10px_0px_0px_rgba(186,230,253,1)]">
+        <section id="services-section" class="md:col-span-5 p-6 sm:p-8 lg:p-10 card-secondary">
             <div class="flex justify-between items-center mb-6">
-                <h2
-                    class="text-xs font-black bg-amber-200 text-slate-950 uppercase tracking-widest px-3.5 py-1.5 inline-block border-2 border-slate-950 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                <h2 class="text-xs font-black card-accent uppercase tracking-widest px-3.5 py-1.5 inline-block">
                     02. Services
                 </h2>
-             
             </div>
 
             <div class="flex flex-col gap-3.5 text-xs">
                 <div
-                    class="p-3 bg-pink-500 dark:bg-pink-500 text-slate-950 dark:text-white font-black border-3 border-slate-950 dark:border-slate-600 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:shadow-[4px_4px_0px_0px_rgba(186,230,253,1)] transition-transform hover:-translate-x-1 flex items-center justify-between">
+                    class="p-3 bg-pink-500 dark:bg-pink-500 text-slate-950 dark:text-white font-black border-3 border-slate-950 dark:border-slate-600 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:shadow-[4px_4px_0px_0px_rgba(250,246,238,1)] flex items-center justify-between">
                     <span> Website Creation</span>
                     <span
-                        class="bg-sky-100 dark:bg-slate-900 text-[10px] text-slate-950 dark:text-white px-1.5 py-0.5 border border-slate-950 dark:border-sky-200">WEB</span>
+                        class="bg-[#FAF6EE] dark:bg-slate-900 text-[10px] text-slate-950 dark:text-white px-1.5 py-0.5 border border-slate-950 dark:border-[#FAF6EE]">WEB</span>
                 </div>
                 <div
-                    class="p-3 bg-pink-500 dark:bg-pink-500 text-slate-950 dark:text-white font-black border-3 border-slate-950 dark:border-slate-600 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:shadow-[4px_4px_0px_0px_rgba(186,230,253,1)] transition-transform hover:-translate-x-1 flex items-center justify-between">
+                    class="p-3 bg-pink-500 dark:bg-pink-500 text-slate-950 dark:text-white font-black border-3 border-slate-950 dark:border-slate-600 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:shadow-[4px_4px_0px_0px_rgba(250,246,238,1)] flex items-center justify-between">
                     <span> System Creation</span>
                     <span
-                        class="bg-sky-100 dark:bg-slate-900 text-[10px] text-slate-950 dark:text-white px-1.5 py-0.5 border border-slate-950 dark:border-sky-200">APPS</span>
+                        class="bg-[#FAF6EE] dark:bg-slate-900 text-[10px] text-slate-950 dark:text-white px-1.5 py-0.5 border border-slate-950 dark:border-[#FAF6EE]">APPS</span>
                 </div>
                 <div
-                    class="p-3 bg-pink-500 dark:bg-pink-500 text-slate-950 dark:text-white font-black border-3 border-slate-950 dark:border-slate-600 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:shadow-[4px_4px_0px_0px_rgba(186,230,253,1)] transition-transform hover:-translate-x-1 flex items-center justify-between">
+                    class="p-3 bg-pink-500 dark:bg-pink-500 text-slate-950 dark:text-white font-black border-3 border-slate-950 dark:border-slate-600 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:shadow-[4px_4px_0px_0px_rgba(250,246,238,1)] flex items-center justify-between">
                     <span> AI Automation</span>
                     <span
-                        class="bg-sky-100 dark:bg-slate-900 text-[10px] text-slate-950 dark:text-white px-1.5 py-0.5 border border-slate-950 dark:border-sky-200">AUTO</span>
+                        class="bg-[#FAF6EE] dark:bg-slate-900 text-[10px] text-slate-950 dark:text-white px-1.5 py-0.5 border border-slate-950 dark:border-[#FAF6EE]">AUTO</span>
                 </div>
                 <div
-                    class="p-3 bg-pink-500 dark:bg-pink-500 text-slate-950 dark:text-white font-black border-3 border-slate-950 dark:border-slate-600 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:shadow-[4px_4px_0px_0px_rgba(186,230,253,1)] transition-transform hover:-translate-x-1 flex items-center justify-between">
+                    class="p-3 bg-pink-500 dark:bg-pink-500 text-slate-950 dark:text-white font-black border-3 border-slate-950 dark:border-slate-600 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:shadow-[4px_4px_0px_0px_rgba(250,246,238,1)] flex items-center justify-between">
                     <span> Database Management</span>
                     <span
-                        class="bg-sky-100 dark:bg-slate-900 text-[10px] text-slate-950 dark:text-white px-1.5 py-0.5 border border-slate-950 dark:border-sky-200">DATA</span>
+                        class="bg-[#FAF6EE] dark:bg-slate-900 text-[10px] text-slate-950 dark:text-white px-1.5 py-0.5 border border-slate-950 dark:border-[#FAF6EE]">DATA</span>
                 </div>
                 <div
-                    class="p-3 bg-pink-500 dark:bg-pink-500 text-slate-950 dark:text-white font-black border-3 border-slate-950 dark:border-slate-600 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:shadow-[4px_4px_0px_0px_rgba(186,230,253,1)] transition-transform hover:-translate-x-1 flex items-center justify-between">
+                    class="p-3 bg-pink-500 dark:bg-pink-500 text-slate-950 dark:text-white font-black border-3 border-slate-950 dark:border-slate-600 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:shadow-[4px_4px_0px_0px_rgba(250,246,238,1)] flex items-center justify-between">
                     <span> Systems Analysis</span>
                     <span
-                        class="bg-sky-100 dark:bg-slate-900 text-[10px] text-slate-950 dark:text-white px-1.5 py-0.5 border border-slate-950 dark:border-sky-200">ARCH</span>
+                        class="bg-[#FAF6EE] dark:bg-slate-900 text-[10px] text-slate-950 dark:text-white px-1.5 py-0.5 border border-slate-950 dark:border-[#FAF6EE]">ARCH</span>
                 </div>
             </div>
         </section>
 
-        <section id="contact"
-            class="md:col-span-12 p-6 sm:p-10 bg-sky-100 dark:bg-slate-900 border-4 border-slate-950 dark:border-sky-200 shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] dark:shadow-[10px_10px_0px_0px_rgba(186,230,253,1)]">
+        <section class="md:col-span-12 p-6 sm:p-8 lg:p-10 card-secondary">
             <div class="flex justify-between items-center mb-6">
                 <h2
-                    class="text-xs font-black bg-pink-500 text-slate-950 uppercase tracking-widest px-3.5 py-1.5 inline-block border-2 border-slate-950 dark:border-sky-200 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:shadow-[4px_4px_0px_0px_rgba(186,230,253,1)]">
-                    03. Contact
+                    class="text-xs font-black card-accent uppercase tracking-widest px-3.5 py-1.5 inline-block dark:border-[#FAF6EE] dark:shadow-[4px_4px_0px_0px_rgba(250,246,238,1)]">
+                    03. Skills
                 </h2>
-                
+            </div>
+
+            <div class="flex flex-wrap gap-3 text-xs sm:text-sm font-black">
+                <span
+                    class="px-3.5 py-2 bg-pink-500 text-slate-950 dark:text-slate-950 border-3 border-slate-950 dark:border-slate-950 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:shadow-[4px_4px_0px_0px_rgba(250,246,238,1)]">HTML5</span>
+                <span
+                    class="px-3.5 py-2 bg-pink-500 text-slate-950 dark:text-slate-950 border-3 border-slate-950 dark:border-slate-950 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:shadow-[4px_4px_0px_0px_rgba(250,246,238,1)]">CSS3
+                    / Tailwind CSS v4</span>
+                <span
+                    class="px-3.5 py-2 bg-pink-500 text-slate-950 dark:text-slate-950 border-3 border-slate-950 dark:border-slate-950 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:shadow-[4px_4px_0px_0px_rgba(250,246,238,1)]">JavaScript</span>
+                <span
+                    class="px-3.5 py-2 bg-pink-500 text-slate-950 dark:text-slate-950 border-3 border-slate-950 dark:border-slate-950 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:shadow-[4px_4px_0px_0px_rgba(250,246,238,1)]">Git
+                    & GitHub</span>
+                <span
+                    class="px-3.5 py-2 bg-pink-500 text-slate-950 dark:text-slate-950 border-3 border-slate-950 dark:border-slate-950 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:shadow-[4px_4px_0px_0px_rgba(250,246,238,1)]">Systems
+                    Architecture</span>
+                <span
+                    class="px-3.5 py-2 bg-pink-500 text-slate-950 dark:text-slate-950 border-3 border-slate-950 dark:border-slate-950 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:shadow-[4px_4px_0px_0px_rgba(250,246,238,1)]">Database
+                    Management</span>
+                <span
+                    class="px-3.5 py-2 bg-pink-500 text-slate-950 dark:text-slate-950 border-3 border-slate-950 dark:border-slate-950 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:shadow-[4px_4px_0px_0px_rgba(250,246,238,1)]">SQL</span>
+                <span
+                    class="px-3.5 py-2 bg-pink-500 text-slate-950 dark:text-slate-950 border-3 border-slate-950 dark:border-slate-950 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:shadow-[4px_4px_0px_0px_rgba(250,246,238,1)]">Process
+                    Modeling</span>
+            </div>
+        </section>
+
+        <section class="md:col-span-6 p-6 sm:p-8 lg:p-10 card-secondary">
+            <div class="flex justify-between items-center mb-6">
+                <h2
+                    class="text-xs font-black card-accent uppercase tracking-widest px-3.5 py-1.5 inline-block dark:border-[#FAF6EE] dark:shadow-[4px_4px_0px_0px_rgba(250,246,238,1)]">
+                    04. Experience
+                </h2>
+            </div>
+
+            <div class="space-y-4">
+                <div
+                    class="p-4 bg-pink-500 dark:bg-slate-800 border-3 border-slate-950 dark:border-slate-600 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:shadow-[4px_4px_0px_0px_rgba(250,246,238,1)]">
+                    <span
+                        class="inline-block card-accent text-[10px] font-black uppercase px-2 py-0.5 border border-slate-950 mb-2">
+                        2025 - Present
+                    </span>
+                    <h3 class="text-sm font-black text-slate-950 dark:text-white uppercase">Systems Analyst & Developer
+                    </h3>
+                    <p class="text-xs font-bold text-amber-200 dark:text-pink-400 mt-1">Independent / Professional
+                        Practice</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="md:col-span-6 p-6 sm:p-8 lg:p-10 card-secondary">
+            <div class="flex justify-between items-center mb-6">
+                <h2
+                    class="text-xs font-black card-accent uppercase tracking-widest px-3.5 py-1.5 inline-block dark:border-[#FAF6EE] dark:shadow-[4px_4px_0px_0px_rgba(250,246,238,1)]">
+                    05. Education
+                </h2>
+            </div>
+
+            <div class="space-y-4">
+                <div
+                    class="p-4 bg-pink-500 dark:bg-slate-800 border-3 border-slate-950 dark:border-slate-600 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:shadow-[4px_4px_0px_0px_rgba(250,246,238,1)]">
+                    <span
+                        class="inline-block card-accent text-[10px] font-black uppercase px-2 py-0.5 border border-slate-950 mb-2">
+                        Degree Program
+                    </span>
+                    <h3 class="text-sm font-black text-slate-950 dark:text-white uppercase">BS Information Systems</h3>
+                    <p class="text-xs font-bold text-amber-200 dark:text-pink-400 mt-1">Colegio de Sta. Ana de Victorias
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="md:col-span-12 p-6 sm:p-10 lg:p-12 card-secondary w-full">
+            <div class="flex justify-between items-center mb-6">
+                <h2
+                    class="text-xs font-black bg-pink-500 text-slate-950 uppercase tracking-widest px-3.5 py-1.5 inline-block border-2 border-slate-950 dark:border-[#FAF6EE] shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:shadow-[4px_4px_0px_0px_rgba(250,246,238,1)]">
+                    06. Contact
+                </h2>
             </div>
 
             <form class="space-y-5 text-xs font-bold">
@@ -168,14 +285,14 @@
                         <label
                             class="uppercase tracking-wider font-black text-slate-900 dark:text-slate-100">Name</label>
                         <input type="text" placeholder="YOUR NAME" required
-                            class="w-full p-3.5 border-3 border-slate-950 dark:border-sky-200 bg-sky-50 dark:bg-slate-800 text-slate-900 dark:text-slate-100 placeholder:text-slate-500 focus:bg-sky-200 dark:focus:bg-slate-900 focus:outline-none shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:shadow-[4px_4px_0px_0px_rgba(186,230,253,1)] transition-colors">
+                            class="w-full p-3.5 border-3 border-slate-950 dark:border-[#FAF6EE] bg-[#FDFBF7] dark:bg-slate-800 text-slate-900 dark:text-slate-100 placeholder:text-slate-500 focus:bg-[#FAF6EE] dark:focus:bg-slate-900 focus:outline-none shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:shadow-[4px_4px_0px_0px_rgba(250,246,238,1)] transition-colors">
                     </div>
 
                     <div class="space-y-1.5">
                         <label
                             class="uppercase tracking-wider font-black text-slate-900 dark:text-slate-100">Email</label>
                         <input type="email" placeholder="YOUR EMAIL ADDRESS" required
-                            class="w-full p-3.5 border-3 border-slate-950 dark:border-sky-200 bg-sky-50 dark:bg-slate-800 text-slate-900 dark:text-slate-100 placeholder:text-slate-500 focus:bg-sky-200 dark:focus:bg-slate-900 focus:outline-none shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:shadow-[4px_4px_0px_0px_rgba(186,230,253,1)] transition-colors">
+                            class="w-full p-3.5 border-3 border-slate-950 dark:border-[#FAF6EE] bg-[#FDFBF7] dark:bg-slate-800 text-slate-900 dark:text-slate-100 placeholder:text-slate-500 focus:bg-[#FAF6EE] dark:focus:bg-slate-900 focus:outline-none shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:shadow-[4px_4px_0px_0px_rgba(250,246,238,1)] transition-colors">
                     </div>
                 </div>
 
@@ -183,7 +300,7 @@
                     <label
                         class="uppercase tracking-wider font-black text-slate-900 dark:text-slate-100">Message</label>
                     <textarea placeholder="PROJECT DETAILS / INQUIRIES..." rows="4" required
-                        class="w-full p-3.5 border-3 border-slate-950 dark:border-sky-200 bg-sky-50 dark:bg-slate-800 text-slate-900 dark:text-slate-100 placeholder:text-slate-500 focus:bg-sky-200 dark:focus:bg-slate-900 focus:outline-none resize-none shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:shadow-[4px_4px_0px_0px_rgba(186,230,253,1)] transition-colors"></textarea>
+                        class="w-full p-3.5 border-3 border-slate-950 dark:border-[#FAF6EE] bg-[#FDFBF7] dark:bg-slate-800 text-slate-900 dark:text-slate-100 placeholder:text-slate-500 focus:bg-[#FAF6EE] dark:focus:bg-slate-900 focus:outline-none resize-none shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:shadow-[4px_4px_0px_0px_rgba(250,246,238,1)] transition-colors"></textarea>
                 </div>
 
                 <div class="flex flex-wrap gap-4 pt-2">
@@ -200,8 +317,8 @@
     </main>
 
     <footer
-        class="p-6 text-center text-xs font-black bg-sky-100 dark:bg-slate-900 border-4 border-slate-950 dark:border-sky-200 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] dark:shadow-[8px_8px_0px_0px_rgba(186,230,253,1)] flex flex-col sm:flex-row justify-between items-center gap-4">
-        <div class ="dark:text-white">© KIM LOZANO. ALL RIGHTS RESERVED.</div>
+        class="p-6 text-center text-xs font-black card-secondary flex flex-col sm:flex-row justify-between items-center gap-4 w-full">
+        <div class="dark:text-white">© KIM LOZANO. ALL RIGHTS RESERVED.</div>
         <div class="flex items-center gap-3">
             <span
                 class="inline-block w-2.5 h-2.5 rounded-full bg-emerald-500 border border-slate-950 animate-pulse"></span>
@@ -209,13 +326,51 @@
         </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"></script>
+    <script> console.log("Gsap ver", gsap.version);
+        //TWEEN
+        // gsap.to ("h1", {duration: 1, x: 200, rotation: 360});
+        // gsap.from ("h1", {duration: 2, y: 100, rotation: 360 , opacity:0}); 
+        //gsap.fromTo("h1", { x: -100, y: 50, rotation: 0, opacity: 0 }, { duration: 1.5, x: 0, y: 0, rotation: 360, opacity: 1});
+
+
+        //EASING
+        //gsap.to ("h1", { duration: 1, x: 200,  ease: "elastic.out(1, 0.3)" });
+
+
+        // STAGGER 
+        // gsap.fromTo("li", { x: -100, y: 50, rotation: 0, opacity: 0 }, { duration: 1.5, x: 0, y: 0, rotation: 360, opacity: 1, stagger: 0.2 });
+
+        //TIMELINE
+        const tl = gsap.timeline({ defaults: { duration: 0.5, ease: "power1.out" } });
+        tl.fromTo("h1", { y: -100, y: 50, opacity: 0 }, { x: 0, y: 0, opacity: 1 })
+            .fromTo("li", { y: -100, y: 50, opacity: 0 }, { x: 0, y: 0, opacity: 1, stagger: 0.2 })
+            .fromTo("main", { y: -100, y: 50, opacity: 0 }, { x: 0, y: 0, opacity: 1 });
+
+
+        const elements = document.querySelectorAll(
+            "body > header, body > nav, main, main section, footer, button, a.btn-primary"
+        );
+
+        gsap.ticker.add(() => {
+            elements.forEach((element, index) => {
+                gsap.set(element, {
+                    y: Math.sin(gsap.ticker.time * 2 + index * 0.5) * 5
+                });
+            });
+        });
+    </script>
     <script>
         const tb = document.querySelector("#toggledark");
         const html = document.querySelector("html");
 
         tb.addEventListener("click", function () {
             html.classList.toggle("dark");
+            gsap.fromTo(tb, { rotation: 0 }, { rotation: 360, duration: 0.6, ease: "back.out(1.7)" }
+            );
         });
+        document.querySelector("#replay")?.addEventListener("click", () => tl.restart());
+
     </script>
 </body>
 
